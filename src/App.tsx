@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustStrip from './components/TrustStrip'
@@ -13,6 +14,22 @@ import ThemeToggle from './components/ThemeToggle'
 import CookieBanner from './components/CookieBanner'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import TermsOfService from './components/TermsOfService'
+
+function ScrollToHash() {
+  const { hash, pathname } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '')
+      // Small delay to ensure DOM is rendered after route change
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    } else if (pathname !== '/') {
+      window.scrollTo(0, 0)
+    }
+  }, [hash, pathname])
+  return null
+}
 
 function LandingPage() {
   return (
@@ -32,6 +49,7 @@ function LandingPage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <div className="min-h-screen">
         <Navbar />
         <Routes>
