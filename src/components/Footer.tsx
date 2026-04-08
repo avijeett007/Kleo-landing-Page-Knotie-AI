@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, MapPin, Building2 } from 'lucide-react'
-import { PHONE_DISPLAY, PHONE_HREF, COMPANY } from '../config'
+import { BRAND_NAME, LOGO_IMAGE, PHONE_DISPLAY, PHONE_HREF, COMPANY } from '../config'
 
 export default function Footer() {
   return (
@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/">
-              <img src="/images/kleo-logo.png" alt="Kleo" className="h-16 w-auto mb-4" />
+              <img src={LOGO_IMAGE} alt={BRAND_NAME} className="h-16 w-auto mb-4" />
             </Link>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              AI-powered services for your business. Kleo handles the tech so you can focus on growing.
+              {`AI-powered services for your business. ${BRAND_NAME} handles the tech so you can focus on growing.`}
             </p>
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 mt-4 text-sm text-kleo-orange hover:text-orange-400 transition-colors font-mono font-medium">
               <Phone size={14} />

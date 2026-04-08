@@ -6,7 +6,7 @@ import { Badge } from './ui/badge'
 import { Card } from './ui/card'
 import { Input } from './ui/input'
 import { Separator } from './ui/separator'
-import { PHONE_DISPLAY, PHONE_HREF } from '../config'
+import { BRAND_NAME, BANNER_IMAGE, PHONE_DISPLAY, PHONE_HREF } from '../config'
 
 const serviceOptions = [
   { value: 'ai-receptionist', label: 'AI Receptionist', color: '#F97316' },
@@ -59,18 +59,18 @@ export default function LeadForm() {
             </Badge>
 
             <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-              Ready to Meet <span className="text-gradient">Kleo?</span>
+              Ready to Meet <span className="text-gradient">{BRAND_NAME}?</span>
             </h2>
 
             <p className="text-slate-300 mt-4 text-lg leading-relaxed max-w-md">
-              Two ways to reach Kleo. Call directly for an instant conversation, or fill the form and Kleo will message you on WhatsApp.
+              {`Two ways to reach ${BRAND_NAME}. Call directly for an instant conversation, or fill the form and ${BRAND_NAME} will message you on WhatsApp.`}
             </p>
 
             {/* Call CTA */}
             <Card className="mt-8 p-6 bg-slate-900/60 border-orange-500/20 hover:border-orange-500/40 transition-all">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
-                  <p className="text-sm font-medium text-slate-300 mb-1">Prefer to talk? Call Kleo directly</p>
+                  <p className="text-sm font-medium text-slate-300 mb-1">{`Prefer to talk? Call ${BRAND_NAME} directly`}</p>
                   <a href={PHONE_HREF} className="text-2xl font-black text-kleo-orange hover:text-orange-400 transition-colors font-mono">
                     {PHONE_DISPLAY}
                   </a>
@@ -96,9 +96,9 @@ export default function LeadForm() {
             <div className="mt-6 space-y-4">
               {[
                 'Fill in the form with your details',
-                'Kleo reaches out on WhatsApp within minutes',
+                `${BRAND_NAME} reaches out on WhatsApp within minutes`,
                 'Have a friendly chat about your needs',
-                'Your service goes live — Kleo handles the rest',
+                `Your service goes live — ${BRAND_NAME} handles the rest`,
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -122,7 +122,7 @@ export default function LeadForm() {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <img src="/images/kleo-banner.png" alt="Kleo" className="h-20 w-auto opacity-90 drop-shadow-lg" />
+              <img src={BANNER_IMAGE} alt={BRAND_NAME} className="h-20 w-auto opacity-90 drop-shadow-lg" />
             </motion.div>
           </motion.div>
 
@@ -135,9 +135,9 @@ export default function LeadForm() {
                     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', delay: 0.2 }}>
                       <CheckCircle2 size={64} className="text-green-400 mx-auto mb-6" />
                     </motion.div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Awesome! Kleo is on the way.</h3>
+                    <h3 className="text-2xl font-bold text-white mb-3">{`Awesome! ${BRAND_NAME} is on the way.`}</h3>
                     <p className="text-slate-300">
-                      Check your WhatsApp — Kleo will message you shortly to get started with your{' '}
+                      {`Check your WhatsApp — ${BRAND_NAME} will message you shortly to get started with your`}{' '}
                       <span className="font-semibold" style={{ color: selectedService?.color }}>{selectedService?.label}</span> setup.
                     </p>
                   </Card>
@@ -149,9 +149,9 @@ export default function LeadForm() {
                       <div>
                         <h3 className="text-xl font-bold text-white mb-1 flex items-center gap-2">
                           <MessageCircle size={20} className="text-green-400" />
-                          Let Kleo WhatsApp You
+                          {`Let ${BRAND_NAME} WhatsApp You`}
                         </h3>
-                        <p className="text-sm text-slate-300">Fill in your details and Kleo will start a conversation</p>
+                        <p className="text-sm text-slate-300">{`Fill in your details and ${BRAND_NAME} will start a conversation`}</p>
                       </div>
 
                       <div>
@@ -207,7 +207,7 @@ export default function LeadForm() {
                       <Button type="submit" disabled={status === 'sending'} size="lg"
                         className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-green-500/20 py-6">
                         {status === 'sending' ? <Loader2 size={18} className="animate-spin mr-2" /> : <Send size={16} className="mr-2" />}
-                        {status === 'sending' ? 'Connecting...' : 'Let Kleo WhatsApp Me'}
+                        {status === 'sending' ? 'Connecting...' : `Let ${BRAND_NAME} WhatsApp Me`}
                       </Button>
 
                       <p className="text-[11px] text-slate-400 text-center">By submitting, you agree to be contacted via WhatsApp. No spam, ever.</p>

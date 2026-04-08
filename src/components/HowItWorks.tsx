@@ -2,22 +2,23 @@ import { motion } from 'framer-motion'
 import { MessageCircle, Brain, Zap } from 'lucide-react'
 import { Badge } from './ui/badge'
 import { Card } from './ui/card'
+import { BRAND_NAME } from '../config'
 
 const steps = [
   {
     num: '01',
     icon: <MessageCircle size={28} />,
-    title: 'Tell Kleo What You Need',
+    title: `Tell ${BRAND_NAME} What You Need`,
     description:
-      'Pick a service, fill in your details, and Kleo reaches out to you on WhatsApp within minutes. No forms, no waiting rooms — just a conversation.',
+      `Pick a service, fill in your details, and ${BRAND_NAME} reaches out to you on WhatsApp within minutes. No forms, no waiting rooms — just a conversation.`,
     color: '#F97316',
   },
   {
     num: '02',
     icon: <Brain size={28} />,
-    title: 'Kleo Learns Your Business',
+    title: `${BRAND_NAME} Learns Your Business`,
     description:
-      'Through a friendly WhatsApp chat, Kleo understands your business, preferences, and requirements. Like briefing a new team member — but faster.',
+      `Through a friendly WhatsApp chat, ${BRAND_NAME} understands your business, preferences, and requirements. Like briefing a new team member — but faster.`,
     color: '#8B5CF6',
   },
   {
@@ -25,7 +26,7 @@ const steps = [
     icon: <Zap size={28} />,
     title: 'Your Service Goes Live',
     description:
-      'Kleo deploys and configures everything. Your AI receptionist starts answering calls, your OpenClaw gets set up — and Kleo stays available for support.',
+      `${BRAND_NAME} deploys and configures everything. Your AI receptionist starts answering calls, your OpenClaw gets set up — and ${BRAND_NAME} stays available for support.`,
     color: '#10B981',
   },
 ]
@@ -46,7 +47,7 @@ export default function HowItWorks() {
             Simple Process
           </Badge>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-            How <span className="text-gradient">Kleo</span> Works
+            How <span className="text-gradient">{BRAND_NAME}</span> Works
           </h2>
           <p className="text-slate-300 mt-4 max-w-md mx-auto text-lg">
             Three steps. One WhatsApp conversation. Your AI service is live.
