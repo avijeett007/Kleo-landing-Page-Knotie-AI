@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
       <div className="prose-custom space-y-8 text-slate-300 text-sm leading-relaxed">
         <section>
           <h2 className="text-xl font-bold text-white mb-3">1. Who We Are</h2>
-          <p>{COMPANY.name} (Company No. {COMPANY.number}), registered at {COMPANY.address}, {COMPANY.country}. We operate the website kleo.services (&ldquo;the Service&rdquo;).</p>
+          <p>{COMPANY.name} (Company No. {COMPANY.number}), registered at {COMPANY.address}, {COMPANY.country}. We operate the website heykleo.cloud (&ldquo;the Service&rdquo;).</p>
           <p className="mt-2">For data protection enquiries, contact us at {PHONE_DISPLAY} or via the contact form on our website.</p>
         </section>
 

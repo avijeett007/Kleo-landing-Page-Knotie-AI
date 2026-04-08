@@ -15,7 +15,7 @@ export default function TermsOfService() {
       <div className="space-y-8 text-slate-300 text-sm leading-relaxed">
         <section>
           <h2 className="text-xl font-bold text-white mb-3">1. About These Terms</h2>
-          <p>These terms govern your use of kleo.services (&ldquo;the Website&rdquo;) and any services provided by {COMPANY.name} (Company No. {COMPANY.number}), registered at {COMPANY.address}, {COMPANY.country} (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;Kleo&rdquo;).</p>
+          <p>These terms govern your use of heykleo.cloud (&ldquo;the Website&rdquo;) and any services provided by {COMPANY.name} (Company No. {COMPANY.number}), registered at {COMPANY.address}, {COMPANY.country} (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;Kleo&rdquo;).</p>
           <p className="mt-2">By using our Website or services, you agree to these terms.</p>
         </section>
 

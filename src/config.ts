@@ -7,5 +7,5 @@ export const COMPANY = {
   number: '15454352',
   address: 'Suite A 82 James Carter Road, Mildenhall, Ipswich, IP28 7DE',
   country: 'United Kingdom',
-  domain: 'kleo.services',
+  domain: 'heykleo.cloud',
 }

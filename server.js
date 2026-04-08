@@ -57,7 +57,7 @@ app.post('/api/lead', async (req, res) => {
     whatsapp,
     service,
     timestamp: new Date().toISOString(),
-    source: 'kleo.services',
+    source: 'heykleo.cloud',
   }
 
   try {
