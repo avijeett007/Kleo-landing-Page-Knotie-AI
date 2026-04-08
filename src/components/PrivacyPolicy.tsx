@@ -1,9 +1,13 @@
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { COMPANY, PHONE_DISPLAY } from '../config'
 
 export default function PrivacyPolicy() {
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   return (
     <div className="max-w-3xl mx-auto px-6 py-32">
-      <a href="/" className="text-sm text-kleo-orange hover:underline mb-8 inline-block">&larr; Back to Home</a>
+      <Link to="/" className="text-sm text-kleo-orange hover:underline mb-8 inline-block">&larr; Back to Home</Link>
 
       <h1 className="text-4xl font-black text-white mb-2">Privacy Policy</h1>
       <p className="text-sm text-slate-400 mb-10">Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>

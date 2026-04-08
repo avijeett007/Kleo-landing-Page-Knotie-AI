@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Phone, MapPin, Building2 } from 'lucide-react'
 import { PHONE_DISPLAY, PHONE_HREF, COMPANY } from '../config'
 
@@ -8,7 +9,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <img src="/images/kleo-logo.png" alt="Kleo" className="h-16 w-auto mb-4" />
+            <Link to="/">
+              <img src="/images/kleo-logo.png" alt="Kleo" className="h-16 w-auto mb-4" />
+            </Link>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
               AI-powered services for your business. Kleo handles the tech so you can focus on growing.
             </p>
@@ -22,9 +25,9 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
-              <li><a href="#services" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Services</a></li>
-              <li><a href="#how-it-works" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">How It Works</a></li>
-              <li><a href="#get-started" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Get Started</a></li>
+              <li><Link to="/#services" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Services</Link></li>
+              <li><Link to="/#how-it-works" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">How It Works</Link></li>
+              <li><Link to="/#get-started" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Get Started</Link></li>
             </ul>
           </div>
 
@@ -32,9 +35,9 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal</h4>
             <ul className="space-y-2.5">
-              <li><a href="/privacy" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Terms of Service</a></li>
-              <li><a href="/privacy#gdpr" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Your GDPR Rights</a></li>
+              <li><Link to="/privacy" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy#gdpr" className="text-sm text-slate-400 hover:text-kleo-orange transition-colors">Your GDPR Rights</Link></li>
             </ul>
           </div>
         </div>
