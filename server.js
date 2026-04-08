@@ -90,7 +90,7 @@ app.post('/api/lead', async (req, res) => {
 app.use(express.static(resolve(__dirname, 'dist')))
 
 // SPA fallback — serve index.html for all non-API routes
-app.get('*', (_req, res) => {
+app.get('/{*path}', (_req, res) => {
   res.sendFile(resolve(__dirname, 'dist', 'index.html'))
 })
 
