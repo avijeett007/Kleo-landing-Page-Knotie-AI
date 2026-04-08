@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Phone, MessageCircle } from 'lucide-react'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
-import { PHONE_DISPLAY, PHONE_HREF } from '../config'
+import { BRAND_NAME, BRAND_TAGLINE, BRAND_DESCRIPTION, CHARACTER_IMAGE, PHONE_DISPLAY, PHONE_HREF } from '../config'
 
 export default function Hero() {
   return (
@@ -32,11 +32,9 @@ export default function Hero() {
               className="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight"
             >
               <span className="text-white">Meet</span>{' '}
-              <span className="text-gradient">Kleo.</span>
+              <span className="text-gradient">{BRAND_NAME}.</span>
               <br />
-              <span className="text-white">Your AI</span>
-              <br />
-              <span className="text-gradient">Business Partner.</span>
+              <span className="text-gradient">{BRAND_TAGLINE}</span>
             </motion.h1>
 
             <motion.p
@@ -45,8 +43,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-slate-300 max-w-md mt-6 leading-relaxed"
             >
-              I set up AI systems for your business, chat with your customers,
-              and handle the tech — so you can focus on growing.
+              {BRAND_DESCRIPTION}
               <span className="text-white font-medium"> Just tell me what you need.</span>
             </motion.p>
 
@@ -62,7 +59,7 @@ export default function Hero() {
                 className="bg-kleo-orange hover:bg-orange-600 text-white rounded-full px-7 py-6 text-base font-semibold shadow-xl shadow-orange-500/25 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <Phone size={18} className="mr-2" />
-                Call Kleo Now
+                {`Call ${BRAND_NAME} Now`}
               </Button>
 
               <Button
@@ -121,8 +118,8 @@ export default function Hero() {
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-500/20 to-orange-300/10 blur-3xl scale-75" />
               <motion.img
-                src="/images/kleo-character.png"
-                alt="Kleo - Your AI Business Assistant"
+                src={CHARACTER_IMAGE}
+                alt={`${BRAND_NAME} - Your AI Business Assistant`}
                 className="relative z-10 w-[340px] md:w-[420px] lg:w-[460px] drop-shadow-2xl"
                 animate={{ y: [0, -18, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}

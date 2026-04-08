@@ -4,6 +4,7 @@ import { Phone, Cog, Bot, BarChart3, Globe, Headphones, ArrowRight, Lock, Sparkl
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 import { Card } from './ui/card'
+import { BRAND_NAME, CHARACTER_IMAGE } from '../config'
 
 interface Service {
   id: string
@@ -44,7 +45,7 @@ const services: Service[] = [
     name: 'OpenClaw Setup',
     tagline: "I've turned Red. Now I set up your OpenClaw.",
     description:
-      'Complete OpenClaw deployment and configuration for your business. From installation to custom workflows — Kleo handles the entire setup so you can start automating immediately.',
+      `Complete OpenClaw deployment and configuration for your business. From installation to custom workflows — ${BRAND_NAME} handles the entire setup so you can start automating immediately.`,
     icon: <Cog size={22} />,
     color: '#DC2626',
     gradientClass: 'from-red-500/20 to-red-500/5',
@@ -130,11 +131,11 @@ export default function Services() {
             Services
           </Badge>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-            What Can Kleo{' '}
+            {`What Can ${BRAND_NAME}`}{' '}
             <span className="text-gradient">Do For You?</span>
           </h2>
           <p className="text-slate-300 mt-4 max-w-lg mx-auto text-lg">
-            Choose a service, fill in your details, and Kleo will reach out on WhatsApp to get you started.
+            {`Choose a service, fill in your details, and ${BRAND_NAME} will reach out on WhatsApp to get you started.`}
           </p>
         </motion.div>
 
@@ -241,8 +242,8 @@ export default function Services() {
                   />
 
                   <motion.img
-                    src="/images/kleo-character.png"
-                    alt="Kleo"
+                    src={CHARACTER_IMAGE}
+                    alt={BRAND_NAME}
                     className="relative z-10 w-[250px] md:w-[300px] drop-shadow-2xl"
                     style={
                       activeService.kleoMood === 'red'

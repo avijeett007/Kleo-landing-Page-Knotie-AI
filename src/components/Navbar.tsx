@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { Button } from './ui/button'
-import { PHONE_DISPLAY, PHONE_HREF } from '../config'
+import { BRAND_NAME, LOGO_IMAGE, PHONE_DISPLAY, PHONE_HREF } from '../config'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -53,7 +53,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <button onClick={goHome} className="flex items-center cursor-pointer bg-transparent border-none p-0">
-            <img src="/images/kleo-logo.png" alt="Kleo" className="h-20 w-auto" />
+            <img src={LOGO_IMAGE} alt={BRAND_NAME} className="h-20 w-auto" />
           </button>
 
           <ul className="hidden lg:flex items-center gap-8">
@@ -91,7 +91,7 @@ export default function Navbar() {
                 className="bg-kleo-orange hover:bg-orange-600 text-white rounded-full text-xs shadow-lg shadow-orange-500/20"
               >
                 <Phone size={14} className="mr-1.5" />
-                Call Kleo
+                {`Call ${BRAND_NAME}`}
               </Button>
             </div>
 
@@ -130,7 +130,7 @@ export default function Navbar() {
                 className="bg-kleo-orange hover:bg-orange-600 text-white rounded-full px-8 font-semibold"
               >
                 <Phone size={18} className="mr-2" />
-                Call Kleo
+                {`Call ${BRAND_NAME}`}
               </Button>
               <Button
                 onClick={() => handleNavClick('get-started')}

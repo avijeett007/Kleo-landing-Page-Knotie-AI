@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Badge } from './ui/badge'
 import { Card } from './ui/card'
 import { Check, X } from 'lucide-react'
+import { BRAND_NAME } from '../config'
 
 const rows = [
   { label: 'Available 24/7', human: false, kleo: true },
@@ -31,10 +32,10 @@ export default function Comparison() {
           </Badge>
           <h2 className="text-4xl md:text-5xl font-black leading-tight">
             Traditional vs{' '}
-            <span className="text-gradient">Kleo</span>
+            <span className="text-gradient">{BRAND_NAME}</span>
           </h2>
           <p className="text-slate-300 mt-4 max-w-md mx-auto">
-            See why businesses are replacing manual processes with Kleo-powered AI services.
+            {`See why businesses are replacing manual processes with ${BRAND_NAME}-powered AI services.`}
           </p>
         </motion.div>
 
@@ -51,7 +52,7 @@ export default function Comparison() {
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Traditional</span>
               </div>
               <div className="p-4 md:p-5 text-center border-l border-orange-500/20 bg-orange-500/[0.05]">
-                <span className="text-xs font-bold uppercase tracking-wider text-kleo-orange">Kleo</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-kleo-orange">{BRAND_NAME}</span>
               </div>
             </div>
 
@@ -84,7 +85,7 @@ export default function Comparison() {
                 <span className="text-lg font-black text-red-400">$$$$</span>
               </div>
               <div className="p-4 md:p-5 text-center border-l border-orange-500/20 bg-orange-500/[0.05]">
-                <span className="text-lg font-black text-kleo-orange">Talk to Kleo</span>
+                <span className="text-lg font-black text-kleo-orange">{`Talk to ${BRAND_NAME}`}</span>
               </div>
             </div>
           </Card>

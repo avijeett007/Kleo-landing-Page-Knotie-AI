@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import { Shield, Clock, Smartphone, HeartHandshake } from 'lucide-react'
 import { Card } from './ui/card'
+import { BRAND_NAME } from '../config'
 
 const reasons = [
   {
     icon: <Clock size={24} />,
     title: 'Always Available',
-    desc: 'Kleo works 24/7. Your customers get instant responses, even at 3 AM on a Sunday.',
+    desc: `${BRAND_NAME} works 24/7. Your customers get instant responses, even at 3 AM on a Sunday.`,
     color: '#F97316',
   },
   {
@@ -24,7 +25,7 @@ const reasons = [
   {
     icon: <HeartHandshake size={24} />,
     title: 'Human When You Need It',
-    desc: 'Kleo knows when to escalate. Complex issues get routed to you instantly.',
+    desc: `${BRAND_NAME} knows when to escalate. Complex issues get routed to you instantly.`,
     color: '#EC4899',
   },
 ]
@@ -43,7 +44,7 @@ export default function WhyKleo() {
         >
           <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
             Why Businesses{' '}
-            <span className="text-gradient">Choose Kleo</span>
+            <span className="text-gradient">{`Choose ${BRAND_NAME}`}</span>
           </h2>
           <p className="text-slate-300 mt-4 max-w-md mx-auto text-lg">
             Built for businesses that want enterprise-level AI without the complexity.

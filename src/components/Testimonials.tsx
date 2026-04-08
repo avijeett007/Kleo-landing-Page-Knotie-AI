@@ -2,25 +2,26 @@ import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
 import { Card } from './ui/card'
 import { Badge } from './ui/badge'
+import { BRAND_NAME } from '../config'
 
 const testimonials = [
   {
     quote:
-      "Kleo set up our AI receptionist in 2 days. We haven't missed a call since. Our booking rate went up 40% — and we didn't lift a finger.",
+      `${BRAND_NAME} set up our AI receptionist in 2 days. We haven't missed a call since. Our booking rate went up 40% — and we didn't lift a finger.`,
     name: 'Sarah K.',
     title: 'CEO, Real Estate Agency',
     stars: 5,
   },
   {
     quote:
-      "The WhatsApp-first approach is genius. Kleo walked us through the entire OpenClaw setup like a real team member. Best onboarding experience we've ever had.",
+      `The WhatsApp-first approach is genius. ${BRAND_NAME} walked us through the entire OpenClaw setup like a real team member. Best onboarding experience we've ever had.`,
     name: 'Marcus T.',
     title: 'Founder, Digital Marketing Agency',
     stars: 5,
   },
   {
     quote:
-      "We were spending hours every day on phone calls. Now Kleo handles it all — qualifies leads, books appointments, even follows up. It's like having 3 extra staff.",
+      `We were spending hours every day on phone calls. Now ${BRAND_NAME} handles it all — qualifies leads, books appointments, even follows up. It's like having 3 extra staff.`,
     name: 'James O.',
     title: 'Director, Consulting Firm',
     stars: 5,
@@ -51,7 +52,7 @@ export default function Testimonials() {
           </Badge>
           <h2 className="text-4xl md:text-5xl font-black leading-tight">
             What People Say About{' '}
-            <span className="text-gradient">Kleo</span>
+            <span className="text-gradient">{BRAND_NAME}</span>
           </h2>
         </motion.div>
 
